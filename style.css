@@ -1,0 +1,436 @@
+:root {
+  --paper: #faf8f2;
+  --green: #344d42;
+  --muted: #73786e;
+  --line: #dbdfd3;
+  --bs-body-bg: var(--paper);
+  --bs-body-bg-rgb: 250, 248, 242;
+  --bs-body-color: var(--green);
+  --bs-secondary-color: var(--muted);
+  --bs-border-color: var(--line);
+  --bs-border-radius: 5px;
+  --bs-border-radius-sm: 3px;
+  --bs-body-font-family: Arial, sans-serif;
+  --bs-body-font-size: 15px;
+  --bs-body-line-height: 1.7;
+  --bs-link-color: var(--green);
+  --bs-link-color-rgb: 52, 77, 66;
+  --bs-link-hover-color: #263c32;
+  --bs-link-hover-color-rgb: 38, 60, 50;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+h1,
+h2,
+h3,
+.brand,
+.footer-names,
+.monogram,
+.art-note,
+.couple-amp,
+.little-quote,
+.gift-symbol,
+.countdown span {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+section {
+  scroll-margin-top: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-space {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  margin-bottom: 22px;
+}
+
+.section-intro {
+  color: var(--muted);
+  max-width: 510px;
+}
+
+.small-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.brand {
+  font-size: 35px;
+  letter-spacing: -3px;
+}
+
+.brand span {
+  font-size: 23px;
+  font-style: italic;
+  padding: 0 3px;
+}
+
+.nav-links a {
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.hero {
+  padding-top: 65px;
+  padding-bottom: 70px;
+}
+
+.hero h1 {
+  font-size: 118px;
+  letter-spacing: -5px;
+  line-height: .96;
+  margin-bottom: 28px;
+}
+
+.hero h1 span {
+  font-style: italic;
+  color: #8d9b80;
+  font-size: 80px;
+}
+
+.hero-description {
+  max-width: 360px;
+}
+
+.hero-date {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.btn {
+  --bs-btn-border-radius: 3px;
+  --bs-btn-padding-y: 12px;
+  --bs-btn-padding-x: 24px;
+  --bs-btn-font-size: 13px;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--green);
+  --bs-btn-border-color: var(--green);
+  --bs-btn-hover-bg: #263c32;
+  --bs-btn-hover-border-color: #263c32;
+  --bs-btn-active-bg: #263c32;
+  --bs-btn-active-border-color: #263c32;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--green);
+  --bs-btn-border-color: #bbc6af;
+  --bs-btn-hover-color: var(--green);
+  --bs-btn-hover-bg: #e9eddf;
+  --bs-btn-hover-border-color: #bbc6af;
+  --bs-btn-active-bg: var(--green);
+  --bs-btn-active-border-color: var(--green);
+}
+
+.btn span {
+  margin-left: 25px;
+}
+
+.pintu {
+  position: relative;
+  max-width: 375px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.daun-pintu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: #4a6354;
+  transition: transform 1.4s ease-in-out;
+}
+
+.daun-pintu::before {
+  content: '';
+  position: absolute;
+  inset: 22px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 150px 150px 3px 3px;
+}
+
+.daun-kiri {
+  left: 0;
+  transform-origin: left center;
+  border-right: 1px solid #263c32;
+  border-radius: 190px 0 0 5px;
+}
+
+.daun-kanan {
+  right: 0;
+  transform-origin: right center;
+  border-left: 1px solid #263c32;
+  border-radius: 0 190px 5px 0;
+}
+
+.gagang {
+  position: absolute;
+  top: 55%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d8c48a;
+  animation: berdenyut 1.8s ease-in-out infinite;
+}
+
+.daun-kiri .gagang {
+  right: 14px;
+}
+
+.daun-kanan .gagang {
+  left: 14px;
+}
+
+@keyframes berdenyut {
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.pintu.terbuka .daun-kiri {
+  transform: rotateY(-100deg);
+}
+
+.pintu.terbuka .daun-kanan {
+  transform: rotateY(100deg);
+}
+
+.pintu.terbuka .gagang {
+  animation: none;
+}
+
+.invitation-art > * {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.pintu.terbuka .invitation-art > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pintu.terbuka .invitation-art > :nth-child(1) { transition-delay: 0.7s; }
+.pintu.terbuka .invitation-art > :nth-child(2) { transition-delay: 0.9s; }
+.pintu.terbuka .invitation-art > :nth-child(3) { transition-delay: 1.1s; }
+.pintu.terbuka .invitation-art > :nth-child(4) { transition-delay: 1.3s; }
+.pintu.terbuka .invitation-art > :nth-child(5) { transition-delay: 1.5s; }
+.pintu.terbuka .invitation-art > :nth-child(6) { transition-delay: 1.7s; }
+
+.invitation-art {
+  min-height: 470px;
+  border: 1px solid #bbc6af;
+  border-radius: 190px 190px 5px 5px;
+  background: #e9eddf;
+  outline: 1px solid #cfd6c3;
+  outline-offset: -12px;
+  padding: 36px 25px;
+}
+
+.art-star {
+  font-size: 48px;
+  color: #7e906e;
+  line-height: 1;
+}
+
+.art-label,
+.art-bottom {
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.monogram {
+  font-size: 103px;
+  line-height: 1.2;
+  letter-spacing: -8px;
+}
+
+.monogram span {
+  font-style: italic;
+  font-size: 60px;
+  color: #849276;
+}
+
+.art-line {
+  height: 35px;
+  width: 1px;
+  background: #a8b49b;
+  margin: 6px 0 18px;
+}
+
+.countdown-section {
+  background: #edf0e7;
+}
+
+.countdown div {
+  min-width: 45px;
+}
+
+.countdown span {
+  font-size: 36px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.countdown small {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.couple-names h3,
+.event-card h3 {
+  font-size: 30px;
+}
+
+.couple-amp {
+  font-style: italic;
+  color: #9ca98d;
+  font-size: 48px;
+}
+
+.event-section {
+  background: #f0eee5;
+}
+
+.event-cards {
+  max-width: 850px;
+}
+
+.event-number {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.event-card h3 {
+  margin-top: 22px;
+}
+
+.wish-form {
+  background: #fffefa;
+}
+
+.form-control {
+  border-radius: var(--bs-border-radius-sm);
+  padding: 11px 13px;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  border-color: #839677;
+  box-shadow: 0 0 0 3px #82997425;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-status {
+  font-size: 13px;
+  margin: 12px 0 0;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.wish-list {
+  max-height: 350px;
+}
+
+.gift-section {
+  background: #e9eddf;
+}
+
+.gift-symbol {
+  font-size: 47px;
+  line-height: 1;
+}
+
+.gift-panel {
+  max-width: 440px;
+}
+
+footer {
+  padding: 55px 20px 25px;
+}
+
+footer .eyebrow {
+  font-size: 8px;
+  margin-bottom: 15px;
+}
+
+.footer-names {
+  font-size: 36px;
+}
+
+@media (max-width: 991px) {
+  .hero h1 {
+    font-size: 83px;
+  }
+
+  .hero h1 span {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  .hero {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .invitation-art {
+    min-height: 390px;
+  }
+
+  .pintu {
+    max-width: 320px;
+  }
+
+  .section-space {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .couple-amp {
+    font-size: 36px;
+  }
+
+  .eyebrow {
+    letter-spacing: 2px;
+  }
+}
